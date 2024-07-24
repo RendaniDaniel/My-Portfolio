@@ -1,0 +1,111 @@
+@keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #skills {
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .skill-title {
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 3rem;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+  }
+  
+  .skill-desc {
+    font-weight: 400;
+    font-size: 1rem;
+    max-width: 51rem;
+    padding: 0 2rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out 0.5s, transform 1s ease-in-out 0.5s;
+  }
+  
+  .skillBars {
+    width: 100vw;
+    max-width: 80%;
+    margin: 1.5rem;
+    text-align: left;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out 1s, transform 1s ease-in-out 1s;
+  }
+  
+  .skillBar {
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: rgb(50, 50, 50);
+  }
+  
+  .skillBarImg {
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+  }
+  
+  .skillBarText > p {
+    font-size: 0.9rem;
+    font-weight: 200;
+  }
+  
+  @media screen and (max-width: 720px) {
+    .skillBarText > p {
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .skillBarText > p {
+      font-size: 3rem;
+    }
+  
+    .skillBarImg {
+      height: 2.25rem;
+      width: 2.25rem;
+    }
+  
+    .skillBarText > h2 {
+      font-size: 5vw;
+    }
+  }
+  
+  .desktopMenuBt {
+    background: white;
+    border: none;
+    padding: 0.75rem 3.5rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-in-out 1.5s, transform 1s ease-in-out 1.5s;
+  }
+  
+  .fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

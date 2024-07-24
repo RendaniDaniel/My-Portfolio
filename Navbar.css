@@ -1,0 +1,154 @@
+/* Navbar.css */
+
+.navbar {
+    background: rgb(30, 30, 30);
+    height: 5rem;
+    width: 100%;
+    max-width: 75rem; /* Adjust max-width as needed */
+    margin: 0 auto;   /* Center the navbar horizontally */
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.logo {
+    object-fit: cover;
+    height: 3rem;
+    width: 4rem;
+}
+
+.desktopMenu {
+    display: flex;
+    align-items: center;
+}
+
+.desktopMenuListItem {
+    margin: 1rem;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+.desktopMenuListItem:hover {
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+}
+
+.desktopMenuBtn {
+    border: none;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2rem;  /* Increase padding for larger button */
+    font-size: 0.75rem;     /* Increase font size */
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-left: 1rem;
+}
+
+.desktopMenuBtn:hover {
+    background: lightgray;
+}
+
+.desktopMenuImg {
+    object-fit: cover;
+    height: 1.5rem;  /* Increase icon size */
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Mobile menu styles */
+.mobileMenuIcon {
+    display: none;
+    cursor: pointer;
+}
+
+.mobileMenuIcon img {
+    height: 2rem;
+    width: 2rem;
+}
+
+.mobileMenu {
+    display: none;
+    flex-direction: column;
+    background: rgb(30, 30, 30);
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 2;
+}
+
+.mobileMenuListItem {
+    display: inline-block; /* Make the underline fit the text */
+    margin: 1rem 2rem;
+    cursor: pointer;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 0.5rem; /* Add padding to increase the clickable area */
+}
+
+.mobileMenuListItem:hover {
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
+
+.mobileMenuBtn {
+    border: none;
+    background: white;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 2rem;  /* Increase padding for larger button */
+    font-size: 0.75rem;     /* Increase font size */
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 1rem 2rem;
+    transition: background 0.3s;
+}
+
+.mobileMenuBtn:hover {
+    background: lightgray;
+}
+
+.mobileMenuImg {
+    object-fit: cover;
+    height: 1.5rem;  /* Increase icon size */
+    width: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.active {
+    color: yellow;
+    border-bottom: 3px solid yellow;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .desktopMenu {
+        display: none;
+    }
+    .mobileMenuIcon {
+        display: block;
+    }
+    .mobileMenu {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .desktopMenu {
+        display: flex;
+    }
+    .mobileMenuIcon {
+        display: none;
+    }
+}
